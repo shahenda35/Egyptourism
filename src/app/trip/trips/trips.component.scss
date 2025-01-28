@@ -1,0 +1,20 @@
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: black;
+  gap: 20px;
+  padding-top: 10em;
+  // background-image: url(https://images.unsplash.com/photo-1568503445916-aad26dad82ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=397&q=80);
+}
+p-card {
+  margin-bottom: 4em;
+}
+p {
+  font-size: 1.25rem;
+}
+
+p-button {
+  display: block;
+  text-align: center;
+}

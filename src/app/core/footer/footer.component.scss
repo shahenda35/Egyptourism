@@ -1,0 +1,46 @@
+$green: #aaffcd;
+$black: #10221b;
+$white: #fff;
+$light-bg: #eee;
+$border: 2rem solid black;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 2rem;
+}
+.footer {
+  // background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1539768942893-daf53e448371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
+  background-size: cover;
+  background-position: 50%;
+
+  .box-container {
+    @include grid(25rem);
+    .box {
+      h3 {
+        font-size: 2rem;
+        padding: 1.5rem 0;
+        color: $white;
+      }
+      a {
+        display: block;
+        font-size: 1.5rem;
+        color: $white;
+        padding: 1rem 0;
+        i {
+          color: $green;
+          padding-right: 0.5rem;
+        }
+        &:hover {
+          color: $green;
+          i {
+            padding-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

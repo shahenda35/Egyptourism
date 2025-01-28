@@ -1,0 +1,57 @@
+<div>
+    <div class="bg">
+
+    </div>
+        <!-- <img src="" alt="" class="bg"> -->
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1 style="font-weight: bold;">Egypt</h1>
+                <p>
+                    Port Said is a city in northeastern Egypt on the Mediterranean Sea and the northern end of the Suez Canal. It is a major commercial hub for international trade. The city's economy is largely dependent on the canal, fishing, textiles, and food processing industries. Port Said is known for its cultural festivals and historical landmarks, such as the Port Said lighthouse.
+                </p>
+            </div>
+            <div class="column">
+                <div class="table-responsive">
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Column 1</th>
+                                <th scope="col">Column 2</th>
+                                <th scope="col">Column 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td scope="row">R1C1</td>
+                                <td>R1C2</td>
+                                <td>R1C3</td>
+                            </tr>
+                            <tr class="">
+                                <td scope="row">Item</td>
+                                <td>Item</td>
+                                <td>Item</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+    
+        </div>
+    </div>
+    
+    
+    <div>
+        <div class="top-card" *ngIf="cId"> 
+            <div class="card" style="margin-right: 1px;"  *ngFor="let item of FilterLandMarks" >
+                <img src="{{item.imageUrl}}" alt="Card image">
+                <div class="card-body" >    
+                    <h3 class="card-title">{{item.name}}</h3>
+                    <p class="card-text">{{item.description}}</p>
+                    <!-- <p class="card-text">{{item.cityId}}</p> -->
+                </div>
+            </div >
+        </div>
+    </div>
+</div>

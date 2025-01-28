@@ -1,0 +1,84 @@
+<section class="home" id="home">
+  <div class="message">
+    <h1>A good traveller</h1>
+    <h3>Has no fixed plans and is not intent on arriving</h3>
+  </div> 
+  <div class="swiper home-slider " >
+    <swiper-container id="swiper" class="swiper-wrapper">
+      <swiper-slide class="swiper-slide" *ngFor="let item of city">
+        <div class="box" [style.background-image]="'linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ),url(' + item.ImageUrl + ')'">
+          <div class="content">
+            <span>{{item.Name}}</span>
+            <h3 class="marginButton">exploring</h3>
+            <p-button
+              routerLink="/city/Dahab"
+              label="Discover"
+              styleClass="discover-button p-button-lg p-button-rounded p-button-secondary"
+            ></p-button>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>
+
+<!-- <section >
+  <div class="swiper home-slider " >
+    <swiper-container id="swiper" class="swiper-wrapper"  effect="coverflow" 
+    grab-cursor="true" 
+    centered-slides="true" 
+    coverflow-effect-rotate="50" 
+    coverflow-effect-stretch="0"
+    coverflow-effect-depth="100" 
+    coverflow-effect-modifier="1" 
+    coverflow-effect-slide-shadows="true" 
+    >
+      <swiper-slide class="swiper-slide" *ngFor="let item of city">
+        <div class="box" [style.background-image]="'linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ),url(' + item.ImageUrl + ')'">
+          <div class="content">
+            <span>{{item.Name}}</span>
+            <h3 class="marginButton">exploring</h3>
+            <p-button
+              routerLink="/city/Dahab"
+              label="Discover"
+              styleClass="discover-button p-button-lg p-button-rounded p-button-secondary"
+            ></p-button>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section> -->
+
+<section class="landmark" id="show">
+  <h1 class="heading">Our LandMarks</h1>
+  <div class="landmark-slider">
+    <swiper-container 
+      effect="coverflow" 
+      grab-cursor="true" 
+      centered-slides="true" 
+      coverflow-effect-rotate="50" 
+      coverflow-effect-stretch="0"
+      coverflow-effect-depth="100" 
+      coverflow-effect-modifier="1" 
+      coverflow-effect-slide-shadows="true" 
+      id="landmark-swiper" class="landmark-wrapper" 
+    >
+      <swiper-slide class="slide-landmark" *ngFor="let item of land">
+        <div class="image">
+          <img src="{{item.imageUrl}}"/>
+        </div>
+        <div class="content">
+          <h3>{{item.name}}</h3>
+          <p>
+            {{item.description}}
+          </p>
+          <a>read more</a>
+          <div class="rating-container">
+            <p-rating [(ngModel)]="value" [cancel]="false"></p-rating>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>
