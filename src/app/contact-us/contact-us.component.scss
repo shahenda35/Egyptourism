@@ -1,6 +1,7 @@
 .contactus{
     padding-top: 10em;
-    background: url("https://drive.google.com/uc?export=view&id=1cP6chXOhh8NEQ771DuW57xEe9iMB-6E0");
+    // background: url("https://drive.google.com/uc?export=view&id=1cP6chXOhh8NEQ771DuW57xEe9iMB-6E0");
+    background: url("../../assets/contact-us.jpg");
     background-size: cover;
     font-size:x-large;
     color: white;
@@ -9,7 +10,7 @@
     font-weight: bold;
     padding-bottom: 5em;
     background-position-x: 100%;
-
+    min-height: 100%;
 }
 i{
     font-size: x-large;
